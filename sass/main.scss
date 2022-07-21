@@ -1,0 +1,8 @@
+// _base.sass — contains resets, variables, mixins, and utility classes
+// _components.sass — reusable components: buttons, navbars, cards, etc.
+// _layout.sass — container and grid systems, header/sidebar/nav etc.
+// main.sass - contains only imports
+
+@use 'base';
+@use 'layout';
+@use 'components';

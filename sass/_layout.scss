@@ -1,0 +1,24 @@
+// _layout.sass — container and grid systems, header/sidebar/nav etc.
+
+body {
+  margin: 0;
+}
+
+%flex-container-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader {
+  @extend %flex-container-centered;
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loader-content {
+  width: 100px;
+  height: 200px;
+  background-color: black;
+}

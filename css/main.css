@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+
+#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loader-content {
+  width: 100px;
+  height: 200px;
+  background-color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
