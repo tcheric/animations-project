@@ -7,13 +7,14 @@ window.addEventListener("load", () => {
     const preloaderContent = document.querySelector("#loader-content")
 
     // Add class for CSS animations
-    preloader.classList.add("loaded")
-    preloaderContent.classList.add("loaded-content")
+    preloader.classList.add("preloader-anim")
+    preloaderContent.classList.add("loader-content-anim")
 
     // Remove from DOM after animation
     setTimeout(() => {
       preloader.remove()
-    }, 800)
+      document.body.classList.remove("scrollbar-hide")
+  }, 800)
   }, 1000)
 
 })

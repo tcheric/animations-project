@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 %flex-container-centered {
@@ -10,16 +11,24 @@ body {
   align-items: center;
 }
 
+// Preloader 
+
 #preloader {
   @extend %flex-container-centered;
   background-color: red;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  // top: 5vh;
+  // left: 5vw;
   z-index: 1000;
+  margin: 0;
+  // padding-right: 5w;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.loaded {
+.preloader-anim {
   opacity: 0;
   transition: all 1s;
 }
@@ -30,9 +39,26 @@ body {
   background-color: black;
 }
 
-.loaded-content {
+.loader-content-anim {
   transform: scale(1.2);
   transition: all 1s;
   overflow: hidden;
 }
 
+// Scroll-container
+#scroll-container {
+  background-color: rebeccapurple;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+// Sections
+
+section {
+  height: 400px;
+  background-color: yellow;
+  margin: 20px;
+}

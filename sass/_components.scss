@@ -1,1 +1,33 @@
 // _components.sass — reusable components: buttons, navbars, cards, etc.
+
+// Scrollbar
+// ::-webkit-scrollbar {
+//   width: 1em;
+//   z-index: 2;
+//   // opacity: 1;
+// }
+
+// // ::-webkit-scrollbar:hover {
+// //   opacity: 1;
+// // }
+
+// ::-webkit-scrollbar-track {
+//   background: none;
+//   border: 0.5em solid transparent;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: rgba(102, 100, 100, 0);
+//   border-radius: .5em;
+//   // opacity: 0;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: rgb(22, 22, 22);
+// }
+
+// .scrollbar-hide {
+//   overflow: hidden;
+// }
+
+// //make fade in
