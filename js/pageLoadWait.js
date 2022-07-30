@@ -1,8 +1,8 @@
-console.log("page waiting...")
+console.log("Page waiting...")
 
 window.addEventListener("load", () => {
   setTimeout(() => {
-    console.log("page loaded!")
+    console.log("Page loaded!")
     const preloader = document.querySelector("#preloader")
     const preloaderContent = document.querySelector("#loader-content")
 
@@ -14,7 +14,6 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       preloader.remove()
       document.body.classList.remove("scrollbar-hide")
-  }, 800)
+    }, 800)
   }, 1000)
-
 })
