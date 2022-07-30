@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  overflow: hidden;
+  position: relative;
 }
 
 #preloader {
@@ -50,6 +50,10 @@ section {
   height: 400px;
   background-color: yellow;
   margin: 20px;
+}
+
+.hi {
+  height: 500px;
 }
 
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
@@ -137,6 +141,6 @@ html.has-scroll-dragging {
 [data-scroll-direction=horizontal] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
-} /*# sourceMappingURL=main.css.map */
+}
 
 /*# sourceMappingURL=main.css.map */
