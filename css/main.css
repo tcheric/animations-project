@@ -1,9 +1,8 @@
 body {
   margin: 0;
-  position: relative;
 }
 
-#preloader {
+section, #preloader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,18 +37,19 @@ body {
 }
 
 #scroll-container {
-  background-color: rebeccapurple;
-  width: 100vw;
-  height: 100vh;
+  background-color: rgb(163, 163, 163);
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 section {
-  height: 400px;
-  background-color: yellow;
+  flex-direction: column;
+  width: auto;
+  background-color: rgb(163, 163, 163);
   margin: 20px;
+  border: 2px solid black;
+  aspect-ratio: 7/3;
 }
 
 .hi {
