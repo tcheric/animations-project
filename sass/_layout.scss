@@ -65,6 +65,11 @@ section {
   width: auto;
   flex-direction: column;
   height: 100%;
+  padding-inline: 10px;
+}
+
+.container p {
+  text-align: center;
 }
 
 #landing {
