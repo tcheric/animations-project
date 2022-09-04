@@ -4,3 +4,14 @@
 $variable-one: 100%;
 
 // Mixins
+
+// Fonts
+@font-face {
+	font-family: 'D-DIN';
+	src: url('../fonts/D-DIN.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'D-DINExp';
+	src: url('../fonts/D-DINExp.woff') format('woff');
+}

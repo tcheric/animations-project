@@ -12,6 +12,9 @@
   <script src="js/pageLoadWait.js"></script>
   <script src="js/locomotive-scroll.min.js" async></script>
   <script src="js/locomotive-init.js" defer></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script> -->
+  <script src="js/animations.js" defer></script>
+  <script src="js/gsap.min.js" defer></script>
 </head>
 
 <body>
@@ -23,25 +26,40 @@
 
   <div id="scroll-container" data-scroll-container>
     <header></header>
-    <section data-scroll-section>
-      <h2>LANDING</h2> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse aut sapiente accusantium nulla labore mollitia, quaerat quam aliquam libero dolorum. Nesciunt doloremque architecto provident veritatis odio ad non blanditiis!</p>
+    <section id="landing" data-scroll-section>
+      <div class="container">
+        <h2>LANDING</h2> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse aut sapiente accusantium nulla labore mollitia, quaerat quam aliquam libero dolorum. Nesciunt doloremque architecto provident veritatis odio ad non blanditiis!</p>
+      </div>
     </section>
-    <section data-scroll-section>
-      <h2 data-scroll>YT-VIDEO</h2>
-      <p data-scroll data-scroll-speed="2">yello</p> 
+
+    <section id="yt-video" data-scroll-section>
+      <div class="container">
+        <h2 data-scroll>YT-VIDEO</h2>
+        <p data-scroll data-scroll-speed="2">yello</p> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse aut sapiente accusantium nulla labore mollitia, quaerat quam aliquam libero dolorum. Nesciunt doloremque architecto provident veritatis odio ad non blanditiis!</p>
+      </div>
     </section>
-    <section data-scroll-section>
-      <h2>SPECS-LIST</h2> 
+
+    <section id="specs-list" data-scroll-section>
+      <div class="container">
+        <h2>SPECS-LIST</h2> 
+      </div>
     </section>
-    <section data-scroll-section>
-      <h2>IMG-TEXT</h2> 
+    <section id="img-text" data-scroll-section>
+      <div class="container">
+        <h2>IMG-TEXT</h2> 
+      </div>
     </section>
-    <section data-scroll-section>
-      <h2>CAROUSEL</h2> 
+    <section id="carousel" data-scroll-section>
+      <div class="container">
+        <h2>CAROUSEL</h2> 
+      </div>
     </section>
-    <section data-scroll-section>
-      <h2>D-BOX</h2> 
+    <section id="d-box" data-scroll-section>
+      <div class="container">
+        <h2>D-BOX</h2> 
+      </div>
     </section>
     <footer></footer>
   </div>

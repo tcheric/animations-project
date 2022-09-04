@@ -1,8 +1,17 @@
+@font-face {
+  font-family: "D-DIN";
+  src: url("../fonts/D-DIN.woff") format("woff");
+}
+@font-face {
+  font-family: "D-DINExp";
+  src: url("../fonts/D-DINExp.woff") format("woff");
+}
 body {
   margin: 0;
+  font-family: "D-DIN", "Times";
 }
 
-section, #preloader {
+.container, #preloader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,12 +53,30 @@ section, #preloader {
 }
 
 section {
-  flex-direction: column;
-  width: auto;
   background-color: rgb(163, 163, 163);
-  margin: 20px;
+  padding: 20px;
+}
+
+.container {
   border: 2px solid black;
-  aspect-ratio: 7/3;
+  width: auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+#landing {
+  min-height: 740px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "D-DINExp";
+  font-weight: normal;
+}
+
+#yt-video {
+  aspect-ratio: 5/3;
 }
 
 .hi {

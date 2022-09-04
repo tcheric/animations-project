@@ -3,6 +3,8 @@
 body {
   margin: 0;
   // position: relative;
+  font-family: 'D-DIN', 'Times';
+  // padding: 10;
 }
 
 %flex-container-centered {
@@ -19,11 +21,8 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  // top: 5vh;
-  // left: 5vw;
   z-index: 1000;
   margin: 0;
-  // padding-right: 5w;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -56,15 +55,29 @@ body {
 // Sections
 
 section {
-  @extend %flex-container-centered;
-  flex-direction: column;
-  width: auto;
-  // height: 400px;
   background-color: rgb(163, 163, 163);
-  margin: 20px;
-  border: 2px solid black;
-  aspect-ratio: 7 / 3
-  // h2 {
+  padding: 20px;
+}
 
-  // }
+.container {
+  @extend %flex-container-centered;
+  border: 2px solid black;
+  width: auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+#landing {
+  min-height: 740px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: 'D-DINExp';
+  font-weight: normal;
+}
+
+#yt-video {
+  aspect-ratio: 5 / 3;
 }
