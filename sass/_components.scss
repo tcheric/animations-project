@@ -2,35 +2,66 @@
 
 // Menubar
 header {
-  width: 650px;
-  height: 20px;
+  // width: 600px;
+  height: 18px;
   z-index: 2;
   position: fixed;
   top: 50px;
   right: 5vw;
-  // background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
     li {
       display: inline;
-      padding-inline: 15px;
+
+      p {
+        // transform: translateY(8px);
+        padding-inline: inherit;
+        margin: 0;
+      }
     }
+  }
+
+  span {
+    font-size: 26px;
+    letter-spacing: -3px;
+    padding-bottom: 2px;
+    padding-inline: 4px;
+    cursor: default;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 
     img {
-      // display: inline;
       padding-left: 4px;
       height: 28px;
       width: 28px;
-      transform: translateY(8px);
+    }
+
+    img:hover {
+      filter: brightness(2) drop-shadow(0 0 1px rgb(114, 124, 145));
+      transition: 0.3s;
     }
   }
 }
 
+// Links
 a {
   text-decoration: none;
   color: black;
+  padding-inline: 15px;
 }

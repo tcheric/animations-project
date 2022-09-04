@@ -10,11 +10,11 @@
 
   <link rel="stylesheet" href="css/main.css">
   <script src="js/pageLoadWait.js"></script>
-  <script src="js/locomotive-scroll.min.js" async></script>
+  <script src="js/locomotive-scroll.min.js" defer></script>
   <script src="js/locomotive-init.js" defer></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script> -->
-  <script src="js/animations.js" defer></script>
   <script src="js/gsap.min.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </head>
 
 <body>
@@ -29,17 +29,21 @@
     <header id="menu" data-scroll-sticky>
       <ul>
         <!-- <li><a href="#">LANDING</a></li> -->
-        <li><a href="#">ARTEON</a></li>
-        <li><a href="#">CINEMATIC</a></li>
+        <li><a id="m1-link" href="#"><p id="menu1">ARTEON</p></a></li>
+        <li><a id="m2-link" href="#"><p id="menu2">CINEMATIC</p></a></li>
+        <!-- <li><a href="#">CINEMATIC</a></li> -->
         <li><a href="#">SPECS-LIST</a></li>
         <li><a href="#">SUBJECT</a></li>
         <!-- <li><a href="#">INTERIOR</a></li> -->
         <li><a href="#">OPTIONS</a></li>
-        <span>//</span>
-        <li><a href="#">MENU</a></li>
-        <img src="img/logo1.png" alt="">
       </ul>
+      <span>//</span>
+      <a href="#">MENU</a>
+      <button id="menu-button" onclick="alert('menu')">
+        <img src="img/logo1.png" alt="" onclick="">
+      </button>
     </header>
+
     <section id="landing" data-scroll-section>
       <div class="container">
         <h2>LANDING</h2> 
