@@ -16,7 +16,7 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: 16px;
+    height: 20px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -64,4 +64,10 @@ a {
   text-decoration: none;
   color: black;
   padding-inline: 15px;
+  cursor: pointer;
+}
+
+.fade {
+  opacity: 0.4;
+  transition: opacity 0.3s;
 }

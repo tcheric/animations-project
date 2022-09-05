@@ -1,44 +1,67 @@
 // Menu Buttons
-var belowAnim1 = gsap.timeline({paused: true})
+const belowAnim1 = gsap.timeline({paused: true})
   .fromTo("#menu1", {y:18}, { duration: 0.15, y: 0 })
 
-var aboveAnim1 = gsap.timeline({paused: true})
+const aboveAnim1 = gsap.timeline({paused: true})
   .fromTo("#menu1", {y:0}, { duration: 0.15, y: -18 })
 
-var belowAnim2 = gsap.timeline({paused: true})
+const belowAnim2 = gsap.timeline({paused: true})
   .fromTo("#menu2", {y:18}, { duration: 0.15, y: 0 })
 
-var aboveAnim2 = gsap.timeline({paused: true})
+const aboveAnim2 = gsap.timeline({paused: true})
   .fromTo("#menu2", {y:0}, { duration: 0.15, y: -18 })
 
-
-var belowAnim3 = gsap.timeline({paused: true})
+const belowAnim3 = gsap.timeline({paused: true})
   .fromTo("#menu3", {y:18}, { duration: 0.15, y: 0 })
 
-var aboveAnim3 = gsap.timeline({paused: true})
+const aboveAnim3 = gsap.timeline({paused: true})
   .fromTo("#menu3", {y:0}, { duration: 0.15, y: -18 })
 
-
-var belowAnim4 = gsap.timeline({paused: true})
+const belowAnim4 = gsap.timeline({paused: true})
   .fromTo("#menu4", {y:18}, { duration: 0.15, y: 0 })
 
-var aboveAnim4 = gsap.timeline({paused: true})
+const aboveAnim4 = gsap.timeline({paused: true})
   .fromTo("#menu4", {y:0}, { duration: 0.15, y: -18 })
 
-
-var belowAnim5 = gsap.timeline({paused: true})
+const belowAnim5 = gsap.timeline({paused: true})
   .fromTo("#menu5", {y:18}, { duration: 0.15, y: 0 })
 
-var aboveAnim5 = gsap.timeline({paused: true})
+const aboveAnim5 = gsap.timeline({paused: true})
   .fromTo("#menu5", {y:0}, { duration: 0.15, y: -18 })
   
-var lock1 = 0
-var lock2 = 0
-var lock3 = 0
-var lock4 = 0
-var lock5 = 0
+let lock1 = 0
+let lock2 = 0
+let lock3 = 0
+let lock4 = 0
+let lock5 = 0
 
-document.querySelector("#m1-link").addEventListener("mouseenter", (e) => {
+let m1Link = document.querySelector("#m1-link")
+let m2Link = document.querySelector("#m2-link")
+let m3Link = document.querySelector("#m3-link")
+let m4Link = document.querySelector("#m4-link")
+let m5Link = document.querySelector("#m5-link")
+let menuContainer = document.querySelector("#menu")
+
+const linkArray = [m1Link, m2Link, m3Link, m4Link, m5Link]
+
+const addFadeClasses = (currLink) => {
+  for (var menulink of linkArray) {
+    if (!menulink.classList.contains("fade")) {
+      menulink.classList.add("fade")
+    }
+  }
+  currLink.classList.remove("fade")
+}
+
+
+const removeFadeClasses = () => {
+  for (var menulink of linkArray) {
+    menulink.classList.remove("fade")
+  }
+}
+
+
+m1Link.addEventListener("mouseenter", (e) => {
   if (lock1 == 1) {
     return
   }
@@ -52,9 +75,10 @@ document.querySelector("#m1-link").addEventListener("mouseenter", (e) => {
       lock1 = 0
     }, 150)
   }, 150)
+  addFadeClasses(m1Link)
 })
 
-document.querySelector("#m2-link").addEventListener("mouseenter", (e) => {
+m2Link.addEventListener("mouseenter", (e) => {
   if (lock2 == 1) {
     return
   }
@@ -68,10 +92,10 @@ document.querySelector("#m2-link").addEventListener("mouseenter", (e) => {
       lock2 = 0
     }, 150)
   }, 150)
+  addFadeClasses(m2Link)
 })
 
-document.querySelector("#m3-link").addEventListener("mouseenter", (e) => {
-  console.log("RUN ONCE")
+m3Link.addEventListener("mouseenter", (e) => {
   if (lock3 == 1) {
     return
   }
@@ -85,9 +109,10 @@ document.querySelector("#m3-link").addEventListener("mouseenter", (e) => {
       lock3 = 0
     }, 150)
   }, 150)
+  addFadeClasses(m3Link)
 })
 
-document.querySelector("#m4-link").addEventListener("mouseenter", (e) => {
+m4Link.addEventListener("mouseenter", (e) => {
   if (lock4 == 1) {
     return
   }
@@ -101,9 +126,10 @@ document.querySelector("#m4-link").addEventListener("mouseenter", (e) => {
       lock4 = 0
     }, 150)
   }, 150)
+  addFadeClasses(m4Link)
 })
 
-document.querySelector("#m5-link").addEventListener("mouseenter", (e) => {
+m5Link.addEventListener("mouseenter", (e) => {
   if (lock5 == 1) {
     return
   }
@@ -117,5 +143,7 @@ document.querySelector("#m5-link").addEventListener("mouseenter", (e) => {
       lock5 = 0
     }, 150)
   }, 150)
+  addFadeClasses(m5Link)
 })
 
+menuContainer.addEventListener("mouseleave", (e) => {removeFadeClasses()})
