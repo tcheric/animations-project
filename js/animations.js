@@ -41,26 +41,17 @@ let m3Link = document.querySelector("#m3-link")
 let m4Link = document.querySelector("#m4-link")
 let m5Link = document.querySelector("#m5-link")
 let menuContainer = document.querySelector("#menu")
+let underline1 = document.querySelector("#uline1")
+let underline2 = document.querySelector("#uline2")
+let underline3 = document.querySelector("#uline3")
+let underline4 = document.querySelector("#uline4")
+let underline5 = document.querySelector("#uline5")
 
 const linkArray = [m1Link, m2Link, m3Link, m4Link, m5Link]
-
-const addFadeClasses = (currLink) => {
-  for (var menulink of linkArray) {
-    if (!menulink.classList.contains("fade")) {
-      menulink.classList.add("fade")
-    }
-  }
-  currLink.classList.remove("fade")
-}
+const ulineArray = [underline1, underline2, underline3, underline4, underline5]
 
 
-const removeFadeClasses = () => {
-  for (var menulink of linkArray) {
-    menulink.classList.remove("fade")
-  }
-}
-
-
+// Slot Effect
 m1Link.addEventListener("mouseenter", (e) => {
   if (lock1 == 1) {
     return
@@ -146,4 +137,42 @@ m5Link.addEventListener("mouseenter", (e) => {
   addFadeClasses(m5Link)
 })
 
+// Fade effect
+const addFadeClasses = (currLink) => {
+  for (var menulink of linkArray) {
+    if (!menulink.classList.contains("fade")) {
+      menulink.classList.add("fade")
+    }
+  }
+  currLink.classList.remove("fade")
+}
+
+const removeFadeClasses = () => {
+  for (var menulink of linkArray) {
+    menulink.classList.remove("fade")
+  }
+}
+
 menuContainer.addEventListener("mouseleave", (e) => {removeFadeClasses()})
+
+// Underline Effect
+
+setTimeout(()=> {underline1.classList.add("selected")}, 1500)
+
+
+// setTimeout(()=> {
+//   for (uline of ulineArray){
+//     uline.classList.add("selected")
+//   }
+// }, 1500)
+// setTimeout(()=> {underline.classList.remove("selected")}, 2500)
+
+const addUline = (index) => {
+  if (ulineArray[index].classList.contains("selected")) {
+    return
+  }
+  for (var i = 0; i < 5; i++){
+    ulineArray[i].classList.remove("selected")
+  }
+  setTimeout(()=>{ulineArray[index].classList.add("selected")}, 300)
+}
