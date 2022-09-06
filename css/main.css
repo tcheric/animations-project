@@ -84,6 +84,10 @@ h2 {
   aspect-ratio: 5/3;
 }
 
+#specs-list {
+  aspect-ratio: 5/3;
+}
+
 header {
   height: 18px;
   z-index: 2;
@@ -109,6 +113,15 @@ header ul li {
 header ul li p {
   padding-inline: inherit;
   margin: 0;
+  animation: fadeInText 1.5s linear 1s;
+}
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 header span {
   font-size: 26px;
@@ -124,13 +137,16 @@ header button {
   cursor: pointer;
 }
 header button img {
-  padding-left: 4px;
   height: 28px;
   width: 28px;
 }
 header button img:hover {
   filter: brightness(2) drop-shadow(0 0 1px rgb(114, 124, 145));
   transition: 0.3s;
+}
+
+#menu-nav {
+  padding-right: 19px;
 }
 
 .underline {

@@ -192,5 +192,15 @@ m4Link.addEventListener("click", ()=>addUline(3))
 m5Link.addEventListener("click", ()=>addUline(4))
 
 // Logo
+menuLogo = document.querySelector("#menu-logo")
 
 // 1. Rotate Effect
+const rotateAnim = gsap.to(menuLogo, 
+  {
+    rotation: 360, 
+    duration: 1, 
+    delay: 1.3,
+  }
+)
+
+// rotateAnim.seek(0)

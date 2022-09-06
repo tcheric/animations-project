@@ -31,7 +31,7 @@
         <li><a id="m1-link" href="#landing" data-scroll-to>
           <p id="menu1" >ARTEON</p>
         </a></li>
-        <li><a id="m2-link" href="#yt-video" data-scroll-to>
+        <li><a id="m2-link" href="#yt-video" data-scroll-to data-scroll-speed="5">
           <p id="menu2" >CINEMATIC</p>
         </a></li>
         <li><a id="m3-link" href="#specs-list" data-scroll-to>
@@ -46,9 +46,9 @@
         <!-- <li><a href="#">INTERIOR</a></li> -->
       </ul>
       <span>//</span>
-      <a href="#">MENU</a>
-      <button id="menu-button" onclick="alert('menu')">
-        <img src="img/logo1.png" alt="" onclick="">
+      <a id="menu-nav" href="#" onclick="rotateAnim.seek(0)">MENU</a>
+      <button onclick="alert('menu')">
+        <img id="menu-logo" src="img/logo1.png" alt="" onclick="">
       </button>
 
       <div id="uc">
@@ -89,6 +89,7 @@
     <section id="specs-list" data-scroll-section>
       <div class="container">
         <h2>SPECS-LIST</h2> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse aut sapiente accusantium nulla labore mollitia, quaerat quam aliquam libero dolorum. Nesciunt dolorem architecto provident veritatis odio ad non blanditiis!</p>
       </div>
     </section>
     <section id="img-text" data-scroll-section>
