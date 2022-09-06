@@ -113,15 +113,6 @@ header ul li {
 header ul li p {
   padding-inline: inherit;
   margin: 0;
-  animation: fadeInText 1.5s linear 1s;
-}
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 header span {
   font-size: 26px;

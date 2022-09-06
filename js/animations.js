@@ -169,7 +169,7 @@ const removeFadeClasses = () => {
 menuContainerNavOnly.addEventListener("mouseleave", (e) => {removeFadeClasses()})
 
 // 3. Underline Effect
-setTimeout(()=> {underline1.classList.add("selected")}, 1500)
+setTimeout(()=> {underline1.classList.add("selected")}, 1800)
 
 const addUline = (index) => {
   if (ulineArray[index].classList.contains("selected")) {
@@ -191,6 +191,20 @@ m3Link.addEventListener("click", ()=>addUline(2))
 m4Link.addEventListener("click", ()=>addUline(3))
 m5Link.addEventListener("click", ()=>addUline(4))
 
+// 4. Staggered nav fade-in effect 
+gsap.fromTo(m5Link, {opacity: 0}, 
+  {opacity: 1, delay: 1.2, clearProps:"all" }) 
+gsap.fromTo(m4Link, {opacity: 0}, 
+  {opacity: 1, delay: 1.3, clearProps:"all" } ) 
+gsap.fromTo(m3Link, {opacity: 0}, 
+  {opacity: 1, delay: 1.4, clearProps:"all" } ) 
+gsap.fromTo(m2Link, {opacity: 0}, 
+  {opacity: 1, delay: 1.5, clearProps:"all" } ) 
+gsap.fromTo(m1Link, {opacity: 0}, 
+  {opacity: 1, delay: 1.6, clearProps:"all" } ) 
+
+
+
 // Logo
 menuLogo = document.querySelector("#menu-logo")
 
@@ -204,3 +218,4 @@ const rotateAnim = gsap.to(menuLogo,
 )
 
 // rotateAnim.seek(0)
+
