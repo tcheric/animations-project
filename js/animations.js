@@ -156,23 +156,23 @@ const removeFadeClasses = () => {
 menuContainer.addEventListener("mouseleave", (e) => {removeFadeClasses()})
 
 // Underline Effect
-
 setTimeout(()=> {underline1.classList.add("selected")}, 1500)
-
-
-// setTimeout(()=> {
-//   for (uline of ulineArray){
-//     uline.classList.add("selected")
-//   }
-// }, 1500)
-// setTimeout(()=> {underline.classList.remove("selected")}, 2500)
 
 const addUline = (index) => {
   if (ulineArray[index].classList.contains("selected")) {
+    console.log("TERMINATED")
     return
   }
   for (var i = 0; i < 5; i++){
     ulineArray[i].classList.remove("selected")
+    console.log("removed:", i)
   }
   setTimeout(()=>{ulineArray[index].classList.add("selected")}, 300)
 }
+
+m1Link.addEventListener("click", ()=>addUline(0))
+m2Link.addEventListener("click", ()=>addUline(1))
+m3Link.addEventListener("click", ()=>addUline(2))
+m4Link.addEventListener("click", ()=>addUline(3))
+m5Link.addEventListener("click", ()=>addUline(4))
+
