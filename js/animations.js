@@ -40,18 +40,19 @@ let m2Link = document.querySelector("#m2-link")
 let m3Link = document.querySelector("#m3-link")
 let m4Link = document.querySelector("#m4-link")
 let m5Link = document.querySelector("#m5-link")
-let menuContainer = document.querySelector("#menu")
+let menuContainerNavOnly = document.querySelector("#nav-buttons")
 let underline1 = document.querySelector("#uline1")
 let underline2 = document.querySelector("#uline2")
 let underline3 = document.querySelector("#uline3")
 let underline4 = document.querySelector("#uline4")
 let underline5 = document.querySelector("#uline5")
+let ulineContainer = document.querySelector("#uc")
 
 const linkArray = [m1Link, m2Link, m3Link, m4Link, m5Link]
 const ulineArray = [underline1, underline2, underline3, underline4, underline5]
 
 
-// Slot Effect
+// 1. Slot Effect
 m1Link.addEventListener("mouseenter", (e) => {
   if (lock1 == 1) {
     return
@@ -137,7 +138,7 @@ m5Link.addEventListener("mouseenter", (e) => {
   addFadeClasses(m5Link)
 })
 
-// Fade effect
+// 2. Fade effect
 const addFadeClasses = (currLink) => {
   for (var menulink of linkArray) {
     if (!menulink.classList.contains("fade")) {
@@ -145,17 +146,29 @@ const addFadeClasses = (currLink) => {
     }
   }
   currLink.classList.remove("fade")
+
+  // Add fade to uline unless it is under currLink
+  if ((currLink === m1Link && underline1.classList.contains("selected")) ||
+    (currLink === m2Link && underline2.classList.contains("selected")) ||
+    (currLink === m3Link && underline3.classList.contains("selected")) ||
+    (currLink === m4Link && underline4.classList.contains("selected")) ||
+    (currLink === m5Link && underline5.classList.contains("selected"))) {
+    ulineContainer.classList.remove("fade")
+    return
+  }
+  ulineContainer.classList.add("fade")
 }
 
 const removeFadeClasses = () => {
   for (var menulink of linkArray) {
     menulink.classList.remove("fade")
   }
+  ulineContainer.classList.remove("fade")
 }
 
-menuContainer.addEventListener("mouseleave", (e) => {removeFadeClasses()})
+menuContainerNavOnly.addEventListener("mouseleave", (e) => {removeFadeClasses()})
 
-// Underline Effect
+// 3. Underline Effect
 setTimeout(()=> {underline1.classList.add("selected")}, 1500)
 
 const addUline = (index) => {
@@ -165,9 +178,11 @@ const addUline = (index) => {
   }
   for (var i = 0; i < 5; i++){
     ulineArray[i].classList.remove("selected")
-    console.log("removed:", i)
   }
   setTimeout(()=>{ulineArray[index].classList.add("selected")}, 300)
+
+  // Remove fade from target
+  ulineContainer.classList.remove("fade")
 }
 
 m1Link.addEventListener("click", ()=>addUline(0))
@@ -176,3 +191,6 @@ m3Link.addEventListener("click", ()=>addUline(2))
 m4Link.addEventListener("click", ()=>addUline(3))
 m5Link.addEventListener("click", ()=>addUline(4))
 
+// Logo
+
+// 1. Rotate Effect
