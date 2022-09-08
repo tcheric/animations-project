@@ -204,7 +204,6 @@ gsap.fromTo(m1Link, {opacity: 0},
   {opacity: 1, delay: 1.6, clearProps:"all" } ) 
 
 
-
 // Logo
 menuLogo = document.querySelector("#menu-logo")
 
@@ -218,4 +217,5 @@ const rotateAnim = gsap.to(menuLogo,
 )
 
 // rotateAnim.seek(0)
+// DO onSectionChange after doing the rest - haven't decided on height of pages fo intersectionObserver
 
