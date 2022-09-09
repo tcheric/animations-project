@@ -223,40 +223,16 @@ const rotateAnim = gsap.to(menuLogo,
 // Landing ------------------------------------------------------
 let volkswagen = document.querySelector("#volkswagen")
 
-// gsap.to(volkswagen, {duration: 0.2, delay: 1.3, text: "_RZNVJXBTCT", ease: "none"});
-
-gsap.to(volkswagen, {duration: 0.13, delay:1.8, text: "V_MDJKLFDSUI", ease: "none"});
-gsap.to(volkswagen, {duration: 0.14, delay:1.9, text: "VO!QQPUENDSA", ease: "none"});
-gsap.to(volkswagen, {duration: 0.14, delay:2, text: "VOL@ISWEPDM", ease: "none"});
-gsap.to(volkswagen, {duration: 0.15, delay:2.1, text: "VOLK#UOJQSF", ease: "none"});
-gsap.to(volkswagen, {duration: 0.14, delay:2.2, text: "VOLKS$HIPYH", ease: "none"});
+gsap.to(volkswagen, {duration: 0.13, delay:1.8, text: "V_RDJKLFDSUI", ease: "none"});
+gsap.to(volkswagen, {duration: 0.14, delay:1.9, text: "VO#QQPUENDSA", ease: "none"});
+gsap.to(volkswagen, {duration: 0.14, delay:2, text: "VOL}ISWEPDM", ease: "none"});
+gsap.to(volkswagen, {duration: 0.15, delay:2.1, text: "VOLK>UOJQSF", ease: "none"});
+gsap.to(volkswagen, {duration: 0.14, delay:2.2, text: "VOLKS!HPIYH", ease: "none"});
 gsap.to(volkswagen, {duration: 0.13, delay:2.3, text: "VOLKSW%YGXQ", ease: "none"});
-gsap.to(volkswagen, {duration: 0.12, delay:2.4, text: "VOLKSWA^MJI", ease: "none"});
-gsap.to(volkswagen, {duration: 0.11, delay:2.5, text: "VOLKSWAG&DS", ease: "none"});
+gsap.to(volkswagen, {duration: 0.12, delay:2.4, text: "VOLKSWA=MJI", ease: "none"});
+gsap.to(volkswagen, {duration: 0.11, delay:2.5, text: "VOLKSWAG+DS", ease: "none"});
 gsap.to(volkswagen, {duration: 0.11, delay:2.6, text: "VOLKSWAGE*I", ease: "none"});
-gsap.to(volkswagen, {duration: 0.11, delay:2.7, text: "VOLKSWAGEN_", ease: "none"});
-gsap.to(volkswagen, {duration: 0.11, delay:2.8, text: "VOLKSWAGEN", ease: "none"});
-
-// gsap.to(volkswagen, {duration: 0.15, delay:1.85, text: "V_________", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.15, delay:1.95, text: "VO!!!!!!!!", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.15, delay:2.05, text: "VOL@@@@@@@", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.15, delay:2.15, text: "VOLK######", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.14, delay:2.25, text: "VOLKS$$$$$$", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.13, delay:2.35, text: "VOLKSW%%%%%", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.12, delay:2.45, text: "VOLKSWA^^^^", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.11, delay:2.55, text: "VOLKSWAG&&&", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.11, delay:2.65, text: "VOLKSWAGE**", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.11, delay:2.75, text: "VOLKSWAGEN_", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.11, delay:2.85, text: "VOLKSWAGEN", ease: "none"});
-
-// gsap.to(volkswagen, {duration: 0.05, delay: 1.6, text: "V", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 1.7, text: "VO", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 1.8, text: "VOL", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 1.9, text: "VOLK", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 2, text: "VOLKS", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay:2.1, text: "VOLKSW", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 2.2, text: "VOLKSWA", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 2.3, text: "VOLKSWAG", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 2.4, text: "VOLKSWAGE", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.05, delay: 2.5, text: "VOLKSWAGEN", ease: "none"});
-// gsap.to(volkswagen, {duration: 0.11, delay: 2.6, text: "VOLKSWAGEN", ease: "none"});
+gsap.to(volkswagen, {duration: 0.1, delay:2.7, text: "VOLKSWAGEN_", ease: "none"});
+gsap.to(volkswagen, {duration: 0.1, delay:2.8, text: "VOLKSWAGEN", ease: "none"});
+gsap.to(volkswagen, {duration: 0.1, delay:2.9, text: "VOLKSWAGEN_", ease: "none"});
+gsap.to(volkswagen, {duration: 0.1, delay:3.0, text: "VOLKSWAGEN", ease: "none"});

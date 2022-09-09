@@ -9,6 +9,7 @@
 body {
   margin: 0;
   font-family: "D-DIN", "Times";
+  height: 100vh;
 }
 
 .container, #preloader {
@@ -46,14 +47,14 @@ body {
 }
 
 #scroll-container {
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(251, 251, 251);
   box-sizing: border-box;
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
 section {
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(251, 251, 251);
   padding: 18px;
 }
 
@@ -123,10 +124,16 @@ h2 {
   position: absolute;
   top: 72%;
   left: -4%;
-  font-size: 80px;
+  font-size: 76px;
   z-index: 3;
-  color: #fff;
+  color: rgb(15, 83, 255);
   letter-spacing: 2px;
+  display: flex;
+  justify-content: start;
+}
+
+.data-char {
+  display: inline-flex;
 }
 
 #arteon {
@@ -135,7 +142,7 @@ h2 {
   left: 32%;
   font-size: 150px;
   z-index: 3;
-  color: #fff;
+  color: rgb(24, 48, 107);
   letter-spacing: 26px;
 }
 
