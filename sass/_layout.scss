@@ -45,6 +45,7 @@ body {
 // Scroll-container
 #scroll-container {
   background-color: rgb(163, 163, 163);
+  // background-color: white;
   box-sizing: border-box;
   padding-top: 1px;
   padding-bottom: 1px;
@@ -54,6 +55,7 @@ body {
 
 section {
   background-color: rgb(163, 163, 163);
+  // background-color: rgb(251, 251, 251);
   padding: 18px;
 }
 
@@ -129,9 +131,9 @@ h2 {
 
 #volkswagen {
   position: absolute;
-  top: 74%;
-  left: -3%;
-  font-size: 70px;
+  top: 72%;
+  left: -4%;
+  font-size: 80px;
   // font-family: 'D-DINExp';
   z-index: 3;
   color: #fff;
