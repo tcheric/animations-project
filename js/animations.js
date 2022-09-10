@@ -221,6 +221,7 @@ const rotateAnim = gsap.to(menuLogo,
 
 
 // Landing ------------------------------------------------------
+// 1. Volkswagen text shimmer (scramble) effect
 let volkswagen = document.querySelector("#volkswagen")
 
 gsap.to(volkswagen, {duration: 0.13, delay:1.8, text: "V_RDJKLFDSUI", ease: "none"});
@@ -236,3 +237,43 @@ gsap.to(volkswagen, {duration: 0.1, delay:2.7, text: "VOLKSWAGEN_", ease: "none"
 gsap.to(volkswagen, {duration: 0.1, delay:2.8, text: "VOLKSWAGEN", ease: "none"});
 gsap.to(volkswagen, {duration: 0.1, delay:2.9, text: "VOLKSWAGEN_", ease: "none"});
 gsap.to(volkswagen, {duration: 0.1, delay:3.0, text: "VOLKSWAGEN", ease: "none"});
+
+// 2. Image onhover zindex effect
+
+const tlImage = document.querySelector("#tl-img")
+const brImage = document.querySelector("#br-img")
+let imgLock = 0
+let topElem = "br"
+
+
+tlImage.addEventListener("mouseenter", (e) => {
+  if (imgLock === 1 || topElem === "tl") {
+    return
+  }
+  imgLock = 1
+  gsap.to(tlImage, {duration: 0.5, x:-30 });
+  gsap.to(brImage, {duration: 0.5, x:30 });
+  gsap.to(tlImage, {duration: 0.05, zIndex:2, delay:0.5});
+  gsap.to(brImage, {duration: 0.05, zIndex:1, delay:0.5});
+  gsap.to(tlImage, {duration: 0.5, delay:0.5, x:0 });
+  gsap.to(brImage, {duration: 0.5, delay:0.5, x:0, onComplete: ()=>{
+    imgLock = 0
+    topElem = "tl"
+  }});
+})
+
+brImage.addEventListener("mouseenter", (e) => {
+  if (imgLock === 1 || topElem === "br") {
+    return
+  }
+  imgLock = 1
+  gsap.to(tlImage, {duration: 0.5, x:-30 });
+  gsap.to(brImage, {duration: 0.5, x:30 });
+  gsap.to(tlImage, {duration: 0.05, zIndex:1, delay:0.5});
+  gsap.to(brImage, {duration: 0.05, zIndex:2, delay:0.5});
+  gsap.to(tlImage, {duration: 0.5, delay:0.5, x:0 });
+  gsap.to(brImage, {duration: 0.5, delay:0.5, x:0, onComplete: ()=>{
+    imgLock = 0
+    topElem = "br"
+  }})
+})
